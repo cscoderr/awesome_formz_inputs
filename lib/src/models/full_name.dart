@@ -3,7 +3,7 @@ import 'package:formz/formz.dart';
 /// {@template awesome_formz_inputs}
 /// A Very Good Project created by Very Good CLI.
 /// {@endtemplate}
-enum EmptyValidationError {
+enum FullNameValidationError {
   /// {@macro awesome_formz_inputs}
   empty
 }
@@ -11,7 +11,7 @@ enum EmptyValidationError {
 /// {@template awesome_formz_inputs}
 /// A Very Good Project created by Very Good CLI.
 /// {@endtemplate}
-class Empty extends FormzInput<String, EmptyValidationError> {
+class Empty extends FormzInput<String, FullNameValidationError> {
   /// {@macro awesome_formz_inputs}
   const Empty.pure() : super.pure('');
 
@@ -19,7 +19,7 @@ class Empty extends FormzInput<String, EmptyValidationError> {
   const Empty.dirty([super.value = '']) : super.dirty();
 
   @override
-  EmptyValidationError? validator(String value) {
-    return value.isEmpty ? EmptyValidationError.empty : null;
+  FullNameValidationError? validator(String value) {
+    return value.isEmpty ? FullNameValidationError.empty : null;
   }
 }
