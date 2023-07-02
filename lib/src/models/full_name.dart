@@ -11,12 +11,12 @@ enum FullNameValidationError {
 /// {@template awesome_formz_inputs}
 /// A Very Good Project created by Very Good CLI.
 /// {@endtemplate}
-class Empty extends FormzInput<String, FullNameValidationError> {
+class FullName extends FormzInput<String, FullNameValidationError> {
   /// {@macro awesome_formz_inputs}
-  const Empty.pure() : super.pure('');
+  const FullName.pure() : super.pure('');
 
   /// {@macro awesome_formz_inputs}
-  const Empty.dirty([super.value = '']) : super.dirty();
+  const FullName.dirty([super.value = '']) : super.dirty();
 
   @override
   FullNameValidationError? validator(String value) {

@@ -2,3 +2,4 @@
 library awesome_formz_inputs;
 
 export 'src/awesome_formz_inputs.dart';
+export 'src/models/models.dart';
